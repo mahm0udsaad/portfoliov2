@@ -10,16 +10,19 @@ const Note = ({ children, bg, text, mt , w , x, scale , hiddenContent}) => {
     const [isSmallScreen, setSmallScreen] = useState(false);
     const ref = useRef(null)
     const isInview = useInView(ref , {once:true})
+    const handleResize = () => {
+      if(window.innerWidth < 780 ){
+        setSmallScreen(true);
+      }
+    };
     useEffect(() => {
-      const handleResize = () => {
-        setSmallScreen(window.innerWidth > 750);
-      };
-  
-      window.addEventListener('resize', handleResize);
+      console.log(isSmallScreen);
+      handleResize()
+      window.addEventListener('load', handleResize);
   
       // Clean up the event listener when the component unmounts
       return () => {
-        window.removeEventListener('resize', handleResize);
+        window.removeEventListener('load', handleResize);
       };
     }, []);
 
@@ -50,7 +53,7 @@ const Note = ({ children, bg, text, mt , w , x, scale , hiddenContent}) => {
             {isFull && <RxExit onClick={shrink} className="absolute top-3 right-3 z-30 text-2xl" />}
           {children}
 
-          {isSmallScreen ? 
+          {!isSmallScreen ? 
           (
             isFull  && hiddenContent
             )
