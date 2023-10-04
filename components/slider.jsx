@@ -16,7 +16,7 @@ export default function ProjectSlider () {
                 animate={{y:0}}
                 style={{background:'#00337C'}} className="legend">{img.text}</motion.h1>
                 <div  className="w-11/12 sm:w-5/6 mx-auto">
-                <img src={img.url} />
+                <img className="rounded w-5/6" src={img.url} />
                </div>
                </div>
             ))}

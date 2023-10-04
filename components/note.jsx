@@ -5,7 +5,7 @@ import { AnimatePresence , motion, useInView} from 'framer-motion';
 import {RxExit} from 'react-icons/rx'
 import { imageLinks } from "@/data/images";
 
-const Note = ({ children, bg, text, mt , w , x, scale , hiddenContent}) => {
+const Note = ({ children, bg, text, mt , Y, x, scale , hiddenContent}) => {
     const [isFull, setFull] = useState(false);
     const [isSmallScreen, setSmallScreen] = useState(false);
     const ref = useRef(null)
@@ -27,14 +27,14 @@ const Note = ({ children, bg, text, mt , w , x, scale , hiddenContent}) => {
     }, []);
 
     const displayFull = () => {
-      if(!isSmallScreen){
+      if(isSmallScreen){
         return;
       }
       setFull(true);
     }
     const shrink = (e) => {
       e.stopPropagation(); // Stop event propagation to parent div
-        if(!isSmallScreen){
+        if(isSmallScreen){
           return ;
         }
          setFull(false);
@@ -45,8 +45,8 @@ const Note = ({ children, bg, text, mt , w , x, scale , hiddenContent}) => {
         <motion.div
           ref={ref}
           onClick={displayFull}
-          initial={{ scale: 1, x: 0 }}
-          animate={{width: isFull ? w : "", scale: isInview ? (isFull ? scale : 1): 0, x: isFull ? x : 0 }}
+          initial={{ scale: 1, x: 0 ,y:0}}
+          animate={{y: isFull ? Y : 0, scale: isInview ? (isFull ? scale : 1): 0, x: isFull ? x : 0 }}
           transition={{duration:.2}}
           className={`${isFull ? "z-20 text-sm" : "text-xl"} p-4 sm:p-8 ${bg} ${mt} rounded-lg relative ${text} w-full cursor-pointer`}
           >
@@ -81,7 +81,7 @@ const ref = useRef(null)
     },[y])
     return(
         <>
-         <div ref={ref} className="sm:block hidden sm:-translate-y-[15%] sm:-translate-x-[70%] rotate-[60deg]  images-container sm:w-[45%] sm:h-[300vh] overflow-hidden">
+         <div ref={ref} className="sm:absolute top-5 right-5 hidden sm:-translate-y-[15%] sm:-translate-x-[70%] rotate-[60deg]  images-container lg:w-[45%] lg:h-[300vh] xl:h-[250vh] xl:w-[35%] overflow-hidden">
          {imageLinks.map((img , i )=>(
             <div key={img[0]+imageLinks.length + i} className="flex w-11/12 py-8 justify-between">
                 <img width={200} height={400} key={img[0]} src={img[0]} style={{boxShadow:'33px 1px 0px 0px #aabaff'}} className="border-wrap rounded-full  " alt="projects-image" />

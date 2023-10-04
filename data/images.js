@@ -11,11 +11,11 @@ const imageLinks = [
   ]
   const projectImages = [
     { url: '/images/projects-images/sewedy 1.png', text: 'Elsewedy Automation Website' },
-    { url: '/images/projects-images/twosoft 2.jpg', text: 'Twosoft Website' },
-    { url: '/images/projects-images/Apex_1696001059358 1.jpg', text: 'portfolio Website for a Mobile App Developer (Flutter)' },
-    { url: '/images/projects-images/Apex_1696000973228 1.png', text: 'Hotel Website with booking functionality' },
-    { url: '/images/projects-images/Apex_1696000989923 1.png', text: 'Quiz App (Google Form Alternative)' },
-    { url: '/images/projects-images/Apex_1696000954500 1.png', text: 'E-Shop (E-Commerce website with Cart functionality)' },
+    { url: '/images/projects-images/twosoft 2.png', text: 'Twosoft Website' },
+    { url: '/images/projects-images/client-portfolio.png', text: 'portfolio Website for a Mobile App Developer (Flutter)' },
+    { url: '/images/projects-images/hotel.png', text: 'Hotel Website with booking functionality' },
+    { url: '/images/projects-images/test.png', text: 'Quiz App (Google Form Alternative)' },
+    { url: '/images/projects-images/shop.png', text: 'E-Shop (E-Commerce website with Cart functionality)' },
   ];
   
 export {imageLinks , projectImages}

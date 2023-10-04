@@ -24,7 +24,9 @@ body{
     background: linear-gradient(to right, red, purple);
     padding: 2px;
   }
-
+.gradint{
+  background-image: linear-gradient(45deg, #5324ff, transparent);
+}
 @media (max-width: 768px) {
   .legend{
     bottom: 0 !important;

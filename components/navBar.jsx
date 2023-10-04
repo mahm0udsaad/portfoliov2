@@ -16,7 +16,7 @@ export default function NavBar() {
     <Disclosure as="nav" className="bg-gray-800 relative z-20">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto container px-4 ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex flex-1 items-center justify-between sm:items-stretch ">
                 <div className="flex flex-shrink-0 items-center">
