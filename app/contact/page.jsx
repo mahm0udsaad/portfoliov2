@@ -12,26 +12,24 @@ const Contact = () => {
       subject: '',
       message: '',
     });
-
-        const handleChange = (event) => {
-          const { name, value } = event.target;
-          setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-          }));
-        };
-      
-        const handleSubmit = (event) => {
-          event.preventDefault();
-          axios.post('/api/sendEmail', formData)
-            .then(response => {
-              setIsSubmited(true)
-            })
-            .catch(error => {
-              console.error('Server Error:', error);
-            });
-            setIsSubmited(true)
-        };
+    const handleChange = (event) => {
+      const { name, value } = event.target;
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    };
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      axios.post('/api/', formData)
+        .then(response => {
+          setIsSubmited(true)
+        })
+        .catch(error => {
+          console.error('Server Error:', error);
+        });
+        setIsSubmited(true)
+    };
 
     return ( 
       <div className="h-screen w-full text-white overflow-hidden">
