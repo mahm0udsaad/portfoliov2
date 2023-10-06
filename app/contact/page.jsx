@@ -21,7 +21,7 @@ const Contact = () => {
     };
     const handleSubmit = (event) => {
       event.preventDefault();
-      axios.post('/api/', formData)
+      axios.post('/api/sendEmail', formData)
         .then(response => {
           setIsSubmited(true)
         })

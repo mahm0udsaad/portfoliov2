@@ -39,12 +39,18 @@ export default function Home() {
           <div className="sm:flex w-11/12 justify-between z-20">
             <div className="pt-36 flex sm:justify-around justify-between w-11/12 sm:w-[60%]">
             <div className="social text-5xl flex flex-col text-center sm:space-y-4">
-              <a  href=''>
+              <a  target='_blank' href=''>
               <LiaFacebookSquare  className='text-blue-500'/>
               </a>
+              <a target='_blank' href="">
               <LiaInstagram className='text-purple-500'/>
+              </a>
+              <a target='_blank' href="https://www.linkedin.com/services/page/80148a324606595320/">
               <LiaLinkedin  className='text-sky-500'/>
+              </a>
+              <a target='_blank' href="https://github.com/mahm0udsaad">
               <LiaGithub className='text-white'/>
+              </a>
             </div>
             <div className="intro text-6xl text-white w-4/5">
               <span className='hi'>HI</span> I'm <br /> Mahmoud Saad
@@ -61,16 +67,17 @@ export default function Home() {
           {/* <ImgContainer /> */}
           </div>
         </section>
-        <ImgContainer />
         <section className='section-notes z-20 relative pt-36  w-[85%] mx-auto'>
           <div className='sm:flex sm:space-x-4'>
           <div className='sm:w-1/2 flex flex-col space-y-4'>
           <Note x={150} scale={1.7}  bg={"bg-[#e5020f] gradint"} text={"text-white"}>
           <h1 id='about' className='font-semibold pb-8'>About Me</h1>
             <p>
-            Freelancer Web Developer  i build every
-            small component with my own i always 
-            searching about ways to making life easier
+            I'm not your average web developer. With experience in the world of web3 and a background in working with TensorFlow.js and AI modules,
+             I take pride in crafting unique and innovative solutions. I handle every aspect of my projects,
+              from building the back end to scraping data from cloned websites. I'm not bound by convention;
+               I bring creativity and a 'can-do' attitude to every project.
+             Trust that I can bring the same level of dedication and ingenuity to your project.
             </p>
           </Note>
            <Note x={150} scale={1.5} bg={"bg-white"} text={"text-black"}>
