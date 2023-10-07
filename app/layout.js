@@ -2,8 +2,12 @@
 import NavBar from '@/components/navBar'
 import './globals.css'
 import { AnimatePresence, motion } from 'framer-motion'
-import Footer from '@/components/footer'
+import Footer from '@/components/footer';
 
+export const metadata = {
+  title: `Mahmoud's Portfolio`,
+}
+ 
 export default function RootLayout({ children }) {
   const variants = {
     hidden: { opacity: 0, x: 200, y: 0 },

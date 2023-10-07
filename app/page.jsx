@@ -31,6 +31,17 @@ const TwoSoft = () =>{
             </div>
   )
 }
+const Aboutparag = () =>{
+  return(
+    <span>
+      TensorFlow.js and AI modules, I take pride in crafting unique and innovative solutions.
+       I handle every aspect of my projects,
+    from building the back end to scraping data from cloned websites. I'm not bound by convention;
+      I bring creativity and a 'can-do' attitude to every project.
+    Trust that I can bring the same level of dedication and ingenuity to your project.
+    </span>
+  )
+}
 export default function Home() {
   return (
     <>
@@ -70,14 +81,11 @@ export default function Home() {
         <section className='section-notes z-20 relative pt-36  w-[85%] mx-auto'>
           <div className='sm:flex sm:space-x-4'>
           <div className='sm:w-1/2 flex flex-col space-y-4'>
-          <Note x={150} scale={1.7}  bg={"bg-[#e5020f] gradint"} text={"text-white"}>
-          <h1 id='about' className='font-semibold pb-8'>About Me</h1>
+          <Note x={150}  hiddenContent={<Aboutparag />}  scale={1.7}  bg={"bg-[#e5020f] gradint"} text={"text-white"}>
+          <h1 id='about'className='font-semibold pb-8'>About Me</h1>
             <p>
-            I'm not your average web developer. With experience in the world of web3 and a background in working with TensorFlow.js and AI modules,
-             I take pride in crafting unique and innovative solutions. I handle every aspect of my projects,
-              from building the back end to scraping data from cloned websites. I'm not bound by convention;
-               I bring creativity and a 'can-do' attitude to every project.
-             Trust that I can bring the same level of dedication and ingenuity to your project.
+            I'm not your average web developer. With experience in the world of web3 
+            and a background in working with 
             </p>
           </Note>
            <Note x={150} scale={1.5} bg={"bg-white"} text={"text-black"}>
@@ -123,7 +131,7 @@ export default function Home() {
          <section className='mt-4' >
 
          <Note hiddenContent={<ProjectSlider />} Y={-400}  x={0} mt={"mt-4"} scale={1.2} bg={"bg-[#03C988]"}  text={"text-white"}>
-            <h1 id='projects' className='font-semibold pb-4 '>Projects</h1>
+            <h1 id='projects' className='font-semibold pb-4'>Projects</h1>
           </Note>
 
          </section>
