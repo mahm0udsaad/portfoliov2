@@ -11,19 +11,11 @@ const Note = ({ children, bg, text, mt , Y, x, scale , hiddenContent}) => {
     const ref = useRef(null)
     const isInview = useInView(ref , {once:true})
     const handleResize = () => {
+    };
+    useEffect(() => {
       if(window.innerWidth < 780 ){
         setSmallScreen(true);
       }
-    };
-    useEffect(() => {
-      console.log(isSmallScreen);
-      handleResize()
-      window.addEventListener('load', handleResize);
-  
-      // Clean up the event listener when the component unmounts
-      return () => {
-        window.removeEventListener('load', handleResize);
-      };
     }, []);
 
     const displayFull = () => {

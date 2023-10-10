@@ -1,4 +1,4 @@
-import {LiaFacebookSquare , LiaInstagram , LiaGithub , LiaLinkedin} from 'react-icons/lia'
+import {LiaFacebookSquare , LiaWhatsapp , LiaGithub , LiaLinkedin} from 'react-icons/lia'
 import { FaReact, FaJs, FaDatabase , FaFigma } from 'react-icons/fa'; // Import the icons you need
 import {TbBrandNextjs} from 'react-icons/tb'
 import {SiExpress , SiTypescript} from 'react-icons/si'
@@ -49,12 +49,12 @@ export default function Home() {
         <section className=''>
           <div className="sm:flex w-11/12 justify-between z-20">
             <div className="pt-36 flex sm:justify-around justify-between w-11/12 sm:w-[60%]">
-            <div className="social text-5xl flex flex-col text-center sm:space-y-4">
+            <div className="social text-5xl flex flex-col text-center  space-y-5 sm:space-y-4">
               <a  target='_blank' href=''>
               <LiaFacebookSquare  className='text-blue-500'/>
               </a>
-              <a target='_blank' href="">
-              <LiaInstagram className='text-purple-500'/>
+              <a target='_blank' href="https://wa.me/1279119364">
+              <LiaWhatsapp className='text-green-500'/>
               </a>
               <a target='_blank' href="https://www.linkedin.com/services/page/80148a324606595320/">
               <LiaLinkedin  className='text-sky-500'/>
@@ -70,7 +70,7 @@ export default function Home() {
               <div className="px-4 py-2 bg-[#121924] rounded-full text-sm">Front-End</div>
               </div>
               <div className="border-wrap rounded-full">
-              <div className="px-4 py-2 bg-[#121924] rounded-full text-sm">Back-End</div>
+              <div className="px-4 py-2 bg-[#121924] rounded-full text-sm"> <a href='/cv..pdf ' className='p-4' target='_blank'>Resume</a></div>
               </div>
             </div>
             </div>
@@ -78,9 +78,9 @@ export default function Home() {
           {/* <ImgContainer /> */}
           </div>
         </section>
-        <section className='section-notes z-20 relative pt-36  w-[85%] mx-auto'>
+        <section className='section-notes z-20 relative pt-36  w-11/12 sm:w-[85%] mx-auto'>
           <div className='sm:flex sm:space-x-4'>
-          <div className='sm:w-1/2 flex flex-col space-y-4'>
+          <div className='sm:w-1/2 flex flex-col sm:space-y-4 '>
           <Note x={150}  hiddenContent={<Aboutparag />}  scale={1.7}  bg={"bg-[#e5020f] gradint"} text={"text-white"}>
           <h1 id='about'className='font-semibold pb-8'>About Me</h1>
             <p>
