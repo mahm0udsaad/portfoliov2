@@ -1,4 +1,5 @@
 import {LiaFacebookSquare , LiaWhatsapp , LiaGithub , LiaLinkedin} from 'react-icons/lia'
+import {BiLogoUpwork} from 'react-icons/bi'
 import { FaReact, FaJs, FaDatabase , FaFigma } from 'react-icons/fa'; // Import the icons you need
 import {TbBrandNextjs} from 'react-icons/tb'
 import {SiExpress , SiTypescript} from 'react-icons/si'
@@ -50,17 +51,17 @@ export default function Home() {
           <div className="sm:flex w-11/12 justify-between z-20">
             <div className="pt-36 flex sm:justify-around justify-between w-11/12 sm:w-[60%]">
             <div className="social text-5xl flex flex-col text-center  space-y-5 sm:space-y-4">
-              <a  target='_blank' href=''>
-              <LiaFacebookSquare  className='text-blue-500'/>
-              </a>
-              <a target='_blank' href="https://wa.me/1279119364">
-              <LiaWhatsapp className='text-green-500'/>
-              </a>
-              <a target='_blank' href="https://www.linkedin.com/services/page/80148a324606595320/">
+            <a target='_blank' href="https://www.linkedin.com/services/page/80148a324606595320/">
               <LiaLinkedin  className='text-sky-500'/>
+              </a>
+              <a target='_blank' href="https://wa.me/+201157337829">
+              <LiaWhatsapp className='text-green-500'/>
               </a>
               <a target='_blank' href="https://github.com/mahm0udsaad">
               <LiaGithub className='text-white'/>
+              </a>
+              <a  target='_blank' href='https://www.upwork.com/freelancers/~01d5d33995170dad07'>
+              <BiLogoUpwork  className='text-purple-500'/>
               </a>
             </div>
             <div className="intro text-6xl text-white w-4/5">
