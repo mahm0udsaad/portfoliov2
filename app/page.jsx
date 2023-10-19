@@ -70,7 +70,7 @@ export default function Home() {
               <div className="px-4 py-2 bg-[#121924] rounded-full text-sm">Front-End</div>
               </div>
               <div className="border-wrap rounded-full">
-              <div className="px-4 py-2 bg-[#121924] rounded-full text-sm"> <a href='/cv..pdf ' className='p-4' target='_blank'>Resume</a></div>
+              <div className="px-4 py-2 bg-[#121924] rounded-full text-sm"> <a href='./CV..pdf ' className='p-4' target='_blank'>Resume</a></div>
               </div>
             </div>
             </div>

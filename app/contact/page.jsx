@@ -39,7 +39,9 @@ const Contact = () => {
            <div className="mx-auto mt-5 w-11/12 flex flex-col justify-center">
              <div className="h-full text-center">
              {isSubmited ? (
-                  <h1>done</h1>
+                  <div className="container">
+                    
+                  </div>
                 ) : (
                   <div>
                     <h1 className="text-4xl">Send me an Email</h1>
