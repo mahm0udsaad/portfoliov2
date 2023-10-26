@@ -48,7 +48,7 @@ function Upload() {
     </div>}
     <div className="max-w-md mx-auto p-4 bg-white rounded shadow-md my-8">
       <h2 className="text-2xl font-semibold mb-4">Image Upload</h2>
-      <form onSubmit={handleFormSubmit} encType="multipart/form-data">
+      <form onSubmit={handleFormSubmit}>
         <div className="mb-4">
           <label htmlFor="fileInput" className="block text-gray-600 font-medium">
             Choose an image:

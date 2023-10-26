@@ -1,3 +1,4 @@
+"use client"
 import {LiaFacebookSquare , LiaWhatsapp , LiaGithub , LiaLinkedin} from 'react-icons/lia'
 import {BiLogoUpwork} from 'react-icons/bi'
 import { FaReact, FaJs, FaDatabase , FaFigma } from 'react-icons/fa'; // Import the icons you need
@@ -5,6 +6,8 @@ import {TbBrandNextjs} from 'react-icons/tb'
 import {SiExpress , SiTypescript} from 'react-icons/si'
 import { ImgContainer, Note } from '@/components/note';
 import ProjectSlider from '@/components/slider';
+import { useData } from '@/hooks/useData';
+import Cpost from '@/components/clientPost';
 
 const skills = [
   { name: 'React', icon: <FaReact  className='text-sky-500 text-3xl'/> },
@@ -44,6 +47,7 @@ const Aboutparag = () =>{
   )
 }
 export default function Home() {
+  const posts = useData()
   return (
     <>
       <main className="container mx-auto  flex flex-col">
@@ -83,7 +87,7 @@ export default function Home() {
           <div className='sm:flex sm:space-x-4'>
           <div className='sm:w-1/2 flex flex-col sm:space-y-4 '>
           <Note x={150}  hiddenContent={<Aboutparag />}  scale={1.7}  bg={"bg-[#e5020f] gradint"} text={"text-white"}>
-          <h1 id='about'className='font-semibold pb-8'>About Me</h1>
+          <h1 id='about'className='font-semibold pb-8 '>About Me</h1>
             <p>
             I'm not your average web developer. With experience in the world of web3 
             and a background in working with 
@@ -102,20 +106,9 @@ export default function Home() {
            </Note>
           </div>
          <div className='sm:w-1/2 sm:pt-0 pt-3'>
-            <Note hiddenContent={<TwoSoft />} x={-250} scale={1.4} bg={"bg-[#0040E5]"} text={"text-white"}>
+            <Note x={-250} scale={1.4} bg={"bg-[#0040E5]"} text={"text-white"}>
               <h1 className='font-semibold pb-4  '>Latest Work</h1>
-            <div>
-                <h1 className='flex font-semibold pb-3  items-start justify-around '>El Sewedy Automation: <span className='text-blue-500'>(</span> <p className='text-sm w-full text-center'>Egyptian Automation Company</p> <span className='text-blue-500'>)</span></h1>
-                <div className="img-wrapper flex justify-center">
-                  <img  fetchPriority='low' width={200} height={200} src="/images/projects-images/sewedy 1.png" alt="El Sewedy Website" />
-                </div>
-                  <p>
-                  redesign there website  the old website built
-                     with HTML , CSS , JQuery in the new version
-                      i used Next js for exporting static pages ,
-                      and Tailwind css , Framer motion 
-                  </p>
-            </div>
+            {posts && posts.data.map(item => <Cpost item={item}/>)}
             </Note>
             <Note x={-250} mt={"mt-4"} scale={1.3}  bg={"bg-[#61DAFB]"} text={"text-white"} >
             <div className="container mx-auto">

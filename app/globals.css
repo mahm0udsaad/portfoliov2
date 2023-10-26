@@ -41,7 +41,11 @@ body{
 .social svg:hover{
   filter: drop-shadow(3px 0px 2px);
 }
-
+.text-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 @media (max-width: 768px) {
   .legend{
     bottom: 0 !important;

@@ -7,7 +7,9 @@ export const useData = () =>{
   const apiUrl = '/api/getitems';
     const [data , setData] = useState(null)
     useEffect(()=>{
-        axios.get(apiUrl)
+      var config = {headers: {'Content-Type': 'application/json','Cache-Control' : 'no-cache'}};
+
+        axios.get(apiUrl,config)
       .then(data => {
         setData(data); 
       })

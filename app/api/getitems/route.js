@@ -9,7 +9,6 @@ export async function GET(){
       const work = portfolio.collection('latest_work');
   
       const data = await work.find({}).toArray();
-  
       return Response.json(data);
 
         } catch (err) {
