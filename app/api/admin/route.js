@@ -1,8 +1,5 @@
-import { MongoClient } from "mongodb";
-import { writeFile } from 'fs/promises';
-import { join } from 'path';
-import { NextResponse } from "next/server";
-
+import { MongoClient , GridFSBucket } from "mongodb";
+import fs from 'fs';
 
 export async function POST(Request) {
 
@@ -16,24 +13,31 @@ export async function POST(Request) {
     if(!file){
         return Response.json({success: false });
     }
-
-    const bytes = await file.arrayBuffer()
-    const buffer = Buffer.from(bytes)
-    const clientData = {
-        image:buffer,
-        name,
-        link,
-        brief,
-        description
-    }
-
+    
+    console.log(file.path);
+    
     try {
         const client = new MongoClient(process.env.DB_URL);
         await client.connect();
-
+        
         const portfolio = client.db('portfolio');
+        const bucket = new GridFSBucket(portfolio, { bucketName: 'Bucket' });
         const work = portfolio.collection('latest_work');
+        
+        const uploadStream =  bucket.openUploadStream(name);
+        const fileStream =  fs.createReadStream(file.path);
+        fileStream.pipe(uploadStream);
+        uploadStream.on('finish',async (fileInfo) => {
+            console.log('Image stored with ID:', fileInfo._id);
+            const image =fileInfo._id;
 
+        const clientData = {
+            image,
+            name,
+            link,
+            brief,
+            description
+        }
         if(clientData){
             const insertionResult = await work.insertOne(clientData);
             console.log('Insertion Result:', insertionResult);
@@ -41,6 +45,7 @@ export async function POST(Request) {
             console.log(name +" "+ " Inserted Successfully");
             return Response.json({ insertionResult });
         }
+        })
     } catch (err) {
         console.log(err);
     }
