@@ -40,14 +40,14 @@ const Note = ({ children, bg, text, mt , Y, x, scale , hiddenContent}) => {
           initial={{ scale: 1, x: 0 ,y:0}}
           animate={{y: isFull ? Y : 0, scale: isInview ? (isFull ? scale : 1): 0, x: isFull ? x : 0 }}
           transition={{duration:.2}}
-          className={`${isFull ? "z-20 text-sm" : "text-xl"} p-4  ${bg} ${mt} rounded-lg relative ${text} w-full cursor-pointer`}
+          className={`${isFull ? "z-20 text-sm max-h-[70vh] overflow-auto" : "text-xl"}  mt-3 p-4  ${bg} ${mt} rounded-lg relative ${text} w-full cursor-pointer`}
           >
             {isFull && <RxExit onClick={shrink} className="absolute top-3 right-3 z-30 text-2xl" />}
           {children}
 
           {!isSmallScreen ? 
           (
-            isFull  ? hiddenContent : "..."
+            isFull  ? hiddenContent : null
             )
           :
           (

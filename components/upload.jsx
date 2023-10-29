@@ -43,11 +43,11 @@ function Upload() {
   
   return (
     <>
-    {status &&  <div className="flex justify-center items-center bg-green-500 text-white text-center py-2 px-4 rounded-md my-4">
+    {status &&  <div className="absolute top-10 flex justify-center items-center bg-green-500 text-white text-center py-2 px-4 rounded-md my-4">
     inserted Succsesfully
     </div>}
-    <div className="max-w-md mx-auto p-4 bg-white rounded shadow-md my-8">
-      <h2 className="text-2xl font-semibold mb-4">Image Upload</h2>
+    <div className="max-w-md mx-auto p-4  rounded shadow-md my-8">
+      <h2 className="text-2xl font-semibold mb-4 text-white">Image Upload</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="mb-4">
           <label htmlFor="fileInput" className="block text-gray-600 font-medium">

@@ -48,6 +48,9 @@ const Aboutparag = () =>{
 }
 export default function Home() {
   const posts = useData()
+  const latesWorkFirstItem =posts? posts.data[0] : null
+  const latesWorkSeconedtItem =posts? posts.data[1] : null
+  console.log(latesWorkFirstItem);
   return (
     <>
       <main className="container mx-auto  flex flex-col">
@@ -70,7 +73,7 @@ export default function Home() {
             </div>
             <div className="intro text-6xl text-white w-4/5">
               <span className='hi'>HI</span> I'm <br /> Mahmoud Saad
-            <div className="flex  pt-20 sm:w-1/2 justify-around">
+            <div className="flex  pt-20 w-[70%] lg:w-1/2 justify-around">
               <div className="border-wrap rounded-full">
               <div className="px-4 py-2 bg-[#121924] rounded-full text-sm">Front-End</div>
               </div>
@@ -83,12 +86,12 @@ export default function Home() {
           {/* <ImgContainer /> */}
           </div>
         </section>
-        <section className='section-notes z-20 relative pt-36  w-11/12 sm:w-[85%] mx-auto'>
+        <section className='section-notes z-20 relative pt-36  w-11/12 md:w-full lg:w-[85%] mx-auto'>
           <div className='sm:flex sm:space-x-4'>
           <div className='sm:w-1/2 flex flex-col sm:space-y-4 '>
           <Note x={150}  hiddenContent={<Aboutparag />}  scale={1.7}  bg={"bg-[#e5020f] gradint"} text={"text-white"}>
           <h1 id='about'className='font-semibold pb-8 '>About Me</h1>
-            <p>
+            <p style={{WebkitLineClamp:''}} className='text-clamp'>
             I'm not your average web developer. With experience in the world of web3 
             and a background in working with 
             </p>
@@ -104,22 +107,21 @@ export default function Home() {
             ))}
           </ul>
            </Note>
-          </div>
-         <div className='sm:w-1/2 sm:pt-0 pt-3'>
-            <Note x={-250} scale={1.4} bg={"bg-[#0040E5]"} text={"text-white"}>
-              <h1 className='font-semibold pb-4  '>Latest Work</h1>
-            {posts && posts.data.map(item => <Cpost item={item}/>)}
-            </Note>
-            <Note x={-250} mt={"mt-4"} scale={1.3}  bg={"bg-[#61DAFB]"} text={"text-white"} >
-            <div className="container mx-auto">
+           <Note x={-250} mt={"mt-4"} scale={1.3}  bg={"bg-[#61DAFB]"} text={"text-white"} >
+            <div className=" mx-auto">
             <h1 className="font-bold mb-4">Currently Learning</h1>
             <div className="tech flex flex-col sm:space-y-4 pt-4">
-            <p><strong>Asrtro js  :</strong> new js framework</p>
             <p><strong>Mongo DB   :</strong> streaming and pipelines</p>
-            <p><strong>Solidity JS:</strong> blockchain Development</p>
             </div>
             </div>
             </Note>
+          </div>
+         <div className='sm:w-1/2 '>
+            <Note hiddenContent={<Cpost item={latesWorkSeconedtItem}/>} x={-250} scale={1.4} bg={"bg-[#0040E5]"} text={"text-white"}>
+              <h1 className='font-semibold pb-4  '>Latest Work</h1>
+            <Cpost item={latesWorkFirstItem}/>
+            </Note>
+          
             </div>
          </div>
          <section className='mt-4' >

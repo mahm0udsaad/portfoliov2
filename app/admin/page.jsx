@@ -1,14 +1,10 @@
-import Posts from "@/components/adminPosts";
-import Upload from "@/components/upload";
-import { MongoClient } from "mongodb";
+import { SideBar } from "@/components/sideBar";
 
 const adminPanel = async () => {
 
-
   return (
     <>
-      <Upload />
-      <Posts />
+      <SideBar />
     </>
   );
 };

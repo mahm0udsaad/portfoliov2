@@ -10,7 +10,6 @@ const data = useData()
         <>
           {data && (
         <>
-        <h1>Data is Loading</h1>
         {data.data.map((item) =>(
          <Post item={item} />
         ))}
