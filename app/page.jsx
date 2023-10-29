@@ -116,7 +116,7 @@ export default function Home() {
             </div>
             </Note>
           </div>
-         <div className='sm:w-1/2 '>
+         <div className='sm:w-1/2 flex'>
             <Note hiddenContent={<Cpost item={latesWorkSeconedtItem}/>} x={-250} scale={1.4} bg={"bg-[#0040E5]"} text={"text-white"}>
               <h1 className='font-semibold pb-4  '>Latest Work</h1>
             <Cpost item={latesWorkFirstItem}/>

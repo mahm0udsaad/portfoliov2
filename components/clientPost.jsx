@@ -11,9 +11,9 @@ const Cpost = ({ item }) => {
     const img =item &&  filenameParts[filenameParts.length - 1];
   return (
     <div>
-      {item && <div>
-      <h1 className='flex font-semibold pb-3  items-start justify-around '><p className='w-[20%]'>{item.name}</p> <span className='text-blue-500'>(</span> <p className='text-sm text-center'>{item.brief}</p> <span className='text-blue-500'>)</span></h1>
-        <div className="img-wrapper flex justify-center">
+      {item && <div className='py-8'>
+      <h1 className='flex font-semibold pb-3  items-center justify-around '><p className='w-[20%]'>{item.name}</p> <span className='text-blue-500'>(</span> <p className='text-sm text-center'>{item.brief}</p> <span className='text-blue-500'>)</span></h1>
+        <div className="img-wrapper py-8 flex justify-center">
           <Image
             fetchPriority='low'
             width={400}
