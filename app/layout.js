@@ -11,6 +11,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <link rel='icon' href='/android_1_.svg' />
       <body suppressHydrationWarning={true} className='bg-[#121924] overflow-x-hidden'>
         <NavBar />
           <Transition>
