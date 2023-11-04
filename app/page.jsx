@@ -19,23 +19,6 @@ const skills = [
   { name: 'Express.js', icon: <SiExpress className='text-3xl'/> },
   { name: 'Figma', icon: <FaFigma className='text-3xl text-[#a25aff]'/> },
 ];
-const TwoSoft = () =>{
-  return(
-    <div>
-            <div>
-                <h1 className=' font-semibold pt-4 pb-3 flex items-center justify-between'> TwoSoft : <span className='text-blue-500'>(</span> <p className="text-sm">Indian Interior Design Company</p> <span className='text-blue-500'>)</span></h1>
-                <div className="img-wrapper flex justify-center">
-                  <img  fetchPriority='low' width={200} height={200} src="/images/projects-images/twosoft 2.png" alt="El Sewedy Website" />
-                </div>
-                  <p>
-                         rebuilt there website from HTML
-                          css , to a modern React animated website
-                          with the same old design  
-                  </p>
-              </div>
-            </div>
-  )
-}
 const Aboutparag = () =>{
   return(
     <span>
