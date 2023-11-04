@@ -33,18 +33,18 @@ const Aboutparag = () =>{
 export default function Home() {
   const posts = [
     {
-      image: "public\images\projects-images\daily.png",
-      name: "El sewedy Automation",
-      link: "http://www.elsewedy-automation.com/",
-      brief: "Automation company",
-      description: "migrating Elsewedy Automation's website to Next.js, a powerful and efficient React framework. Next.js offers lightning-fast performance, SEO optimization, and a highly responsive user interface. We'll also leverage Tailwind CSS to ensure a sleek and modern design that aligns with industry standards.\r\n\r\n"
-    },
-    {
-      image: "public\images\projects-images\sewedy 1.png",
+      image: "/images/projects-images/sewedy 1.png",
       name: "daily Travel",
       link: "https://dalitravelsa.com/",
       brief: "Soudi arabia traveling company",
       description: "Transforming a Travel Company Website\r\nI recently had the honor of renewing a travel company's website, transitioning it from PHP to the cutting-edge Next.js framework. With Tailwind CSS for a beautiful UI, Framer Motion for captivating animations, and seamless payment integration, this project was a game-changer in the travel industry."
+    },
+    {
+      image: "/images/projects-images/daily.png",
+      name: "El sewedy Automation",
+      link: "http://www.elsewedy-automation.com/",
+      brief: "Automation company",
+      description: "migrating Elsewedy Automation's website to Next.js, a powerful and efficient React framework. Next.js offers lightning-fast performance, SEO optimization, and a highly responsive user interface. We'll also leverage Tailwind CSS to ensure a sleek and modern design that aligns with industry standards.\r\n\r\n"
     },
   ];
 
@@ -130,44 +130,44 @@ export default function Home() {
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13_3" result="shape"/>
             </filter>
             <linearGradient id="paint0_linear_13_3" x1="222.741" y1="142.2" x2="152.373" y2="141.212" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             <linearGradient id="paint1_linear_13_3" x1="131.148" y1="142.1" x2="69.5759" y2="141.236" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             <linearGradient id="paint2_linear_13_3" x1="111.444" y1="141.7" x2="85.0562" y2="141.33" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             <linearGradient id="paint3_linear_13_3" x1="184.334" y1="216.5" x2="105.294" y2="213.172" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             <linearGradient id="paint4_linear_13_3" x1="273" y1="140" x2="35.5" y2="137" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             <linearGradient id="paint5_linear_13_3" x1="125.889" y1="66.8" x2="99.5077" y2="66.2446" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             <linearGradient id="paint6_linear_13_3" x1="120.852" y1="27.1" x2="112.056" y2="26.9766" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             <linearGradient id="paint7_linear_13_3" x1="125.666" y1="44.7" x2="116.87" y2="44.5766" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             <linearGradient id="paint8_linear_13_3" x1="91.9627" y1="53.5001" x2="83.1667" y2="53.3766" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             <linearGradient id="paint9_linear_13_3" x1="87.1482" y1="71.1" x2="78.3522" y2="70.9765" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009A7E"/>
-            <stop offset="1" stop-color="#0A0049"/>
+            <stop stopColor="#009A7E"/>
+            <stop offset="1" stopColor="#0A0049"/>
             </linearGradient>
             </defs>
             </svg>
@@ -207,7 +207,7 @@ export default function Home() {
          <div className='sm:w-1/2 flex'>
             <Note hiddenContent={<Cpost item={posts[0]}/>} x={-250} scale={1.4} bg={"bg-[#0040E5]"} text={"text-white"}>
               <h1 className='font-semibold pb-4  '>Latest Work</h1>
-            <Cpost item={posts[1]}/>
+             <Cpost item={posts[1]}/>
             </Note>
           
             </div>
