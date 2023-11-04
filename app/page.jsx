@@ -47,23 +47,23 @@ const Aboutparag = () =>{
     </span>
   )
 }
+const posts = [
+  {
+    image: "public/images/projects-images/sewedy.png",
+    name: "El sewedy Automation",
+    link: "http://www.elsewedy-automation.com/",
+    brief: "Automation company",
+    description: "migrating Elsewedy Automation's website to Next.js, a powerful and efficient React framework. Next.js offers lightning-fast performance, SEO optimization, and a highly responsive user interface. We'll also leverage Tailwind CSS to ensure a sleek and modern design that aligns with industry standards.\r\n\r\n"
+  },
+  {
+    image: "public/images/projects-images/daily.png",
+    name: "daily Travel",
+    link: "https://dalitravelsa.com/",
+    brief: "Soudi arabia traveling company",
+    description: "Transforming a Travel Company Website\r\nI recently had the honor of renewing a travel company's website, transitioning it from PHP to the cutting-edge Next.js framework. With Tailwind CSS for a beautiful UI, Framer Motion for captivating animations, and seamless payment integration, this project was a game-changer in the travel industry."
+  },
+];
 export default function Home() {
-  const posts = [
-    {
-      image: "/images/projects-images/daily.png",
-      name: "daily Travel",
-      link: "https://dalitravelsa.com/",
-      brief: "Soudi arabia traveling company",
-      description: "Transforming a Travel Company Website\r\nI recently had the honor of renewing a travel company's website, transitioning it from PHP to the cutting-edge Next.js framework. With Tailwind CSS for a beautiful UI, Framer Motion for captivating animations, and seamless payment integration, this project was a game-changer in the travel industry."
-    },
-    {
-      image: "/images/projects-images/sewedy.png",
-      name: "El sewedy Automation",
-      link: "http://www.elsewedy-automation.com/",
-      brief: "Automation company",
-      description: "migrating Elsewedy Automation's website to Next.js, a powerful and efficient React framework. Next.js offers lightning-fast performance, SEO optimization, and a highly responsive user interface. We'll also leverage Tailwind CSS to ensure a sleek and modern design that aligns with industry standards.\r\n\r\n"
-    }
-  ];
 
   return (
     <>
