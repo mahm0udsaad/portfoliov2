@@ -50,14 +50,14 @@ const Aboutparag = () =>{
 export default function Home() {
   const posts = [
     {
-      image: "/images/projects-images/sewedy.png",
+      image: "public\images\projects-images\daily.png",
       name: "El sewedy Automation",
       link: "http://www.elsewedy-automation.com/",
       brief: "Automation company",
       description: "migrating Elsewedy Automation's website to Next.js, a powerful and efficient React framework. Next.js offers lightning-fast performance, SEO optimization, and a highly responsive user interface. We'll also leverage Tailwind CSS to ensure a sleek and modern design that aligns with industry standards.\r\n\r\n"
     },
     {
-      image: "/images/projects-images/daily.png",
+      image: "public\images\projects-images\sewedy 1.png",
       name: "daily Travel",
       link: "https://dalitravelsa.com/",
       brief: "Soudi arabia traveling company",
