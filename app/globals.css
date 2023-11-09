@@ -9,14 +9,12 @@ body{
   background-color: #121924;
   overflow-x: hidden;
 }
-
 .hi{
     /* background-clip: text; */
     background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 .border-wrap {
     max-width: 250px;
     padding: 1rem;
@@ -24,14 +22,16 @@ body{
     /* border-radius: ; */
     background: linear-gradient(to right, red, purple);
     padding: 2px;
-  }
-  .border-wrap > div{
-    transition:all .5s ease-in;
-  }
-  .border-wrap > div:hover{
-    /* border-radius: ; */
-    background: linear-gradient(to right, red, purple);
-  }
+}
+.border-wrap > div{
+  transition:all .5s ease-in;
+}
+.border-wrap > div:not(.active):hover {
+  background: linear-gradient(to right, red, purple);
+}
+.active{
+  background: linear-gradient(to right, red, purple);
+}
 .gradint{
   background-image: linear-gradient(45deg, #5324ff, transparent);
 }

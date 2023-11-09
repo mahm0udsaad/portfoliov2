@@ -4,7 +4,6 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import LOGO from './logo'
 
 const navigation = [
-  { name: 'Projects', href: '#projects', current: false },
   { name: 'contact', href: '/contact', current: true },
 ]
 

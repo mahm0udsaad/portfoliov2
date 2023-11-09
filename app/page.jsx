@@ -1,6 +1,6 @@
 "use client"
 import {  LiaWhatsapp , LiaGithub , LiaLinkedin} from 'react-icons/lia'
-import {BiLogoUpwork} from 'react-icons/bi';
+import {AiOutlineFacebook} from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { FaReact, FaJs, FaDatabase , FaFigma } from 'react-icons/fa'; // Import the icons you need
 import {TbBrandNextjs} from 'react-icons/tb'
@@ -31,6 +31,7 @@ const Aboutparag = () =>{
   )
 }
 export default function Home() {
+
   const posts = [
     {
       image: "/images/projects-images/sewedy 1.png",
@@ -58,22 +59,22 @@ export default function Home() {
             <a target='_blank' href="https://www.linkedin.com/services/page/80148a324606595320/">
               <LiaLinkedin  className='text-sky-500'/>
               </a>
+              <a  target='_blank' href='https://www.facebook.com/profile.php?id=100063802185264'>
+              <AiOutlineFacebook  className='text-blue-500'/>
+              </a>
               <a target='_blank' href="https://wa.me/+201157337829">
               <LiaWhatsapp className='text-green-500'/>
               </a>
               <a target='_blank' href="https://github.com/mahm0udsaad">
               <LiaGithub className='text-white'/>
               </a>
-              <a  target='_blank' href='https://www.upwork.com/freelancers/~01d5d33995170dad07'>
-              <BiLogoUpwork  className='text-purple-500'/>
-              </a>
             </div>
             <div className="intro text-5xl sm:text-6xl text-white sm:w-4/5">
               <span className='hi'>HI</span> I'm <br /> Mahmoud Saad <br />
-              <p className='text-xl font-thin text-[#cdcccc]'>Your extraordinary web developer</p>
+              <p className='text-sm font-thin text-[#cdcccc]'>Your extraordinary web developer</p>
             <div className="flex  pt-20 lg:w-1/2 justify-around">
               <div className="border-wrap rounded-full">
-              <div className="px-4 py-2 bg-[#121924] rounded-full text-sm">Front-End</div>
+              <div className="px-4 py-2 bg-[#121924] rounded-full text-sm active">All in one</div>
               </div>
               <div className="border-wrap rounded-full">
               <div className="px-4 py-2 bg-[#121924] rounded-full text-sm"> <a href='./CV..pdf ' className='p-4' target='_blank'>Resume</a></div>
@@ -195,7 +196,7 @@ export default function Home() {
             ))}
           </ul>
            </Note>
-           <Note x={-250} mt={"mt-4"} scale={1.3}  bg={"bg-[#61DAFB]"} text={"text-white"} >
+           <Note x={250} mt={"mt-4"} scale={1.3}  bg={"bg-[#61DAFB]"} text={"text-white"} >
             <div className=" mx-auto">
             <h1 className="font-bold mb-4">Currently Learning</h1>
             <div className="tech flex flex-col sm:space-y-4 pt-4">

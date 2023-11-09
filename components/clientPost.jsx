@@ -11,6 +11,7 @@ console.log(item.image);
         <div className="img-wrapper py-8 flex justify-center">
           <img
             fetchPriority='low'
+            className='rounded-lg shadow-xl'
             width={400}
             height={200}
             src={item.image}
